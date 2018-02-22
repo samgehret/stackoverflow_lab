@@ -1,0 +1,23 @@
+{
+  "name": "stackoverflow_lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samgehret/stackoverflow_lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samgehret/stackoverflow_lab/issues"
+  },
+  "homepage": "https://github.com/samgehret/stackoverflow_lab#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
