@@ -2,9 +2,11 @@ const express = require('express')
 const app = express ()
 const hbs = require('hbs')
 const bodyParser = require('body-parser')
+const methodOverride = require('method-override')
 
 const questionController = require('./controllers/questions')
 app.use(bodyParser.urlencoded({extended: true}))
+app.use(methodOverride('_method'))
 
 app.set('view engine', 'hbs')
 
