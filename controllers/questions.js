@@ -6,7 +6,6 @@ const Question = require('../models/Questions')
 router.get('/', (req, res) => {
   Question.find({})
         .then(questions => {
-          console.log(questions[1].answer.length)
           res.render('questions/index', {questions})
         })
 })
