@@ -6,6 +6,7 @@ const Question = require('../models/Questions')
 router.get('/', (req, res) => {
   Question.find({})
         .then(questions => {
+          console.log(questions[1].answer.length)
           res.render('questions/index', {questions})
         })
 })
@@ -15,7 +16,7 @@ router.post('/', (req, res) => {
     title: req.body.title,
     description: req.body.description,
     answer: [],
-    date: 'Feb-19-2018'
+    date: Date.now()
   })
     .then(question => {
       res.redirect('/questions')

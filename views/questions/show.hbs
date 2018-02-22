@@ -1,7 +1,11 @@
 <h1>{{this.title}}</h1>
 
+<p>Date Posted: {{this.date}}</p>
+
+<h2>Question:</h2>
 <p>{{this.description}}</p>
 
+<h2>Answers Below</h2>
 <ul>
     {{#each this.answer}}
     <li>
@@ -10,7 +14,7 @@
     {{/each}}
 </ul>
 
-<p>{{this.date}}</p>
+
 
 
 <a href="/questions/edit/{{id}}">Post an answer</a>

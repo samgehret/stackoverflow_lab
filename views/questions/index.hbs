@@ -6,13 +6,16 @@
 <ul>
     {{#each questions}}
     <li>
-        <a href = '/questions/{{this.id}}'>{{this.title}}</a>
+        <h3>Topic: <a href = '/questions/{{this.id}}'>{{this.title}}</a> </h3> 
         <ul>
             <li>
-                {{this.description}}
+                <p>Question: {{this.description}}</p>
             </li>
             <li>
-                {{this.date}}
+                <p>Date Posted: {{this.date}}</p>
+            </li>
+            <li>
+                <p>Number of Answers: {{this.answer.length}}</p>
             </li>
         </ul>
     </li>
