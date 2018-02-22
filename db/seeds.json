@@ -2,19 +2,31 @@
     {
         "title": "Test Qusetion Title 1",
         "description": "Test Question Description 1",
-        "answer": "['test answer 1', 'test answer 2', 'test answer 3']",
+        "answer": [
+            "test answer 1",
+            "test answer 2",
+            "test answer 3"
+        ],
         "date": "Feb-22-2018"
     },
     {
         "title": "Test Qusetion Title 2",
         "description": "Test Question Description 2",
-        "answer": "['test answer 1', 'test answer 2', 'test answer 3']",
+        "answer": [
+            "test answer 1",
+            "test answer 2",
+            "test answer 3"
+        ],
         "date": "Feb-21-2018"
     },
     {
         "title": "Test Qusetion Title 3",
         "description": "Test Question Description 3",
-        "answer": "['test answer 1', 'test answer 2', 'test answer 3']",
+        "answer": [
+            "test answer 1",
+            "test answer 2",
+            "test answer 3"
+        ],
         "date": "Feb-20-2018"
     }
 ]

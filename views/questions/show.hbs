@@ -3,9 +3,11 @@
 <p>{{this.description}}</p>
 
 <ul>
+    {{#each this.answer}}
     <li>
-    {{this.answer}}
+     {{this}}
     </li>
+    {{/each}}
 </ul>
 
 <p>{{this.date}}</p>
