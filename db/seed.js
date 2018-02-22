@@ -1,5 +1,4 @@
 const Question = require('../models/Questions')
-
 const data = require('./seeds.json')
 
 Question.remove()

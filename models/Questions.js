@@ -1,4 +1,4 @@
-const mongoose = require('../db/connections.js')
+const mongoose = require('../db/connections')
 
 const QuestionsSchema = new mongoose.Schema({
   title: String,
@@ -7,6 +7,6 @@ const QuestionsSchema = new mongoose.Schema({
   date: Date
 })
 
-const Question = mongoose.model('Questions', QuestionsSchema)
+const Question = mongoose.model('Question', QuestionsSchema)
 
 module.exports = Question
