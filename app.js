@@ -13,7 +13,7 @@ app.use('/questions', questionController)
 
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.redirect('/questions')
 })
 
 app.listen(4000, () => {
