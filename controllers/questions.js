@@ -40,6 +40,14 @@ router.put('/:id', (req, res) => {
   })
 })
 
+router.delete('/:id', (req,res) => {
+  Question.findOneAndRemove({_id: req.params.id})
+    .then(() => {
+      res.redirect('/questions')
+    })
+})
+
+
 router.get('/:id', (req, res) => {
   Question.findOne({_id: req.params.id})
     .then(questions => {
