@@ -1,8 +1,11 @@
 const express = require('express')
 const app = express ()
+const hbs = require('hbs')
+
+app.set('view engine', 'hbs')
 
 app.get('/', (req, res) => {
-    res.send('Hello world')
+    res.render('index')
 })
 
 
