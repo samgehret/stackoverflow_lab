@@ -1,0 +1,20 @@
+<h1>All Questions</h1>
+
+<ul>
+    {{#each questions}}
+    <li>
+        {{this.title}}
+        <ul>
+            <li>
+                {{this.description}}
+            </li>
+            <li>
+                {{this.answer}}
+            </li>
+            <li>
+                {{this.date}}
+            </li>
+        </ul>
+    </li>
+    {{/each}}
+</ul>
