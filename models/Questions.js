@@ -1,12 +1,12 @@
 const mongoose = require('../db/connections.js')
 
-const QuestionsSchema = new mongoose.QuestionsSchema({
-    title: String,
-    description: String,
-    answer: Array,
-    date: Date
+const QuestionsSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  answer: Array,
+  date: Date
 })
 
-const Question = mongoose.model('Question', QuestionsSchema)
+const Question = mongoose.model('Questions', QuestionsSchema)
 
-module.export = Question
+module.exports = Question
