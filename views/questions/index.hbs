@@ -3,13 +3,10 @@
 <ul>
     {{#each questions}}
     <li>
-        {{this.title}}
+        <a href = '/questions/{{this.id}}'>{{this.title}}</a>
         <ul>
             <li>
                 {{this.description}}
-            </li>
-            <li>
-                {{this.answer}}
             </li>
             <li>
                 {{this.date}}
