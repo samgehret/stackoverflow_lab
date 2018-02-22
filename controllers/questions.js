@@ -11,21 +11,20 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  console.log("the title is:" + req.body.title)
+  console.log('GEtting here')
+  console.log("Title is" + req.body.title)
   Question.create({
     title: req.body.title,
     description: req.body.description,
     answer: [],
-    date: "Feb-19-2018"
-  }) 
-    .then(question => {
-      res.redirect('/questions')
-    })
+    date: 'Feb-19-2018'
+  }).then(question => {
+    res.redirect('/questions')
+  })
 })
 
-
-router.get('/new',(req, res) => {
-  console.log("Getting new page")
+router.get('/new', (req, res) => {
+  console.log('Getting new page')
   res.render('questions/new')
 })
 

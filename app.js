@@ -1,15 +1,15 @@
 const express = require('express')
 const app = express ()
 const hbs = require('hbs')
-const bodyParser = require("body-parser")
+const bodyParser = require('body-parser')
 
 const questionController = require('./controllers/questions')
-
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.set('view engine', 'hbs')
 
 app.use('/questions', questionController)
-app.use(bodyParser.urlencoded({extended: true}))
+
 
 
 app.get('/', (req, res) => {
