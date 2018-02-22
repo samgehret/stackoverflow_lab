@@ -11,28 +11,33 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  console.log("the title is:" + req.body.title)
   Question.create({
     title: req.body.title,
     description: req.body.description,
     answer: [],
-    date: "Feb-19-2018"
-  }) 
+    date: 'Feb-19-2018'
+  })
     .then(question => {
       res.redirect('/questions')
     })
 })
 
-router.get('/new',(req, res) => {
-  console.log("Getting new page")
+router.get('/new', (req, res) => {
   res.render('questions/new')
 })
 
-router.get('/edit/:id', (req, res)=> {
+router.get('/edit/:id', (req, res) => {
   Question.findOne({_id: req.params.id})
     .then(questions => {
       res.render('questions/edit', questions)
     })
+})
+
+router.put('/:id', (req, res) => {
+  Question.update({_id: req.params.id}, {$push: {answer: req.body.answer}})
+  .then(questions => {
+    res.redirect('/questions/' + req.params.id)
+  })
 })
 
 router.get('/:id', (req, res) => {

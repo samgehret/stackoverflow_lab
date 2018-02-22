@@ -6,10 +6,10 @@ const methodOverride = require('method-override')
 
 const questionController = require('./controllers/questions')
 app.use(bodyParser.urlencoded({extended: true}))
-app.use(methodOverride('_method'))
+
 
 app.set('view engine', 'hbs')
-
+app.use(methodOverride('_method'))
 app.use('/questions', questionController)
 
 
