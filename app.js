@@ -8,8 +8,6 @@ const flash = require('connect-flash')
 const sessions = require('express-session')
 
 
-
-
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.set('view engine', 'hbs')
@@ -21,10 +19,6 @@ require('./config/passport')(passport)
 
 app.use(passport.initialize())
 app.use(passport.session())
-
-
-
-
 
 
 
