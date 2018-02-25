@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const Question = require('../models/Questions')
-const User = require('../models/Users')
+// const User = require('../models/Users')
 
 router.get('/', (req, res) => {
   Question.find({})
