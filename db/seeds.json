@@ -2,6 +2,7 @@
     {
         "title": "Test Qusetion Title 1",
         "description": "Test Question Description 1",
+        "owner": "Sam",
         "answer": [
             "test answer 1",
             "test answer 2",
@@ -12,6 +13,7 @@
     {
         "title": "Test Qusetion Title 2",
         "description": "Test Question Description 2",
+        "owner": "Sam",
         "answer": [
             "test answer 1",
             "test answer 2",
@@ -22,6 +24,7 @@
     {
         "title": "Test Qusetion Title 3",
         "description": "Test Question Description 3",
+        "owner": "Sam",
         "answer": [
             "test answer 1",
             "test answer 2",

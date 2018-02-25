@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const Question = require('../models/Questions')
+const User = require('../models/Users')
 
 router.get('/', (req, res) => {
   Question.find({})
@@ -11,8 +12,11 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+  console.log("The user object is " + req.user)
+  console.log("the poster is" + req.user.local.email)
   Question.create({
     title: req.body.title,
+    owner: req.user.local.email,
     description: req.body.description,
     answer: [],
     date: Date.now()
