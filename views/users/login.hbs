@@ -1,10 +1,12 @@
 <h2>Login</h2>
 
+<p>hello2: {{currentUser.local.email}}</p>
+
 {{#if message}}
   <div class="alert alert-danger">{{message}}</div>
 {{/if}}
 
-<form method="post" action="/login">
+<form method="post" action="/users/login">
   <div class="form-group">
     <label for="email">Email</label>
     <input class="form-control" type="text" name="email" id="email">

@@ -16,9 +16,13 @@
 
 
 
-
-<a href="/questions/edit/{{id}}">Post an answer</a>
-
+<form action = "/questions/{{this.id}}?_method=put" method = "POST">
+<p>
+    <label for="answer">Answer</label>
+    <input type="text" name = "answer">
+</p>
+<input type = "submit" value = "Update">
+</form>
 <form action="/questions/{{id}}?_method=delete" method="POST">
     <input type="submit" value="Delete">
 </form>

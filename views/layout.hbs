@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+<ul class="nav navbar-nav">
+             <li><a href="/questions">All Questions</a></li>
+            {{#if currentUser}}
+              <li><a href="/users/logout">Logout {{currentUser.local.email}}</a></li>
+            {{else}}
+              <li><a href="/users/login">Login</a></li>
+              <li><a href="/users/signup">Signup</a></li>
+            {{/if}}
+          </ul>
+<p>hello: {{currentUser.local.email}}</p>
+
+
     {{{body}}}
 </body>
 </html>

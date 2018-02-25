@@ -1,3 +1,13 @@
 <h1>My app</h1>
 
+{{#if currentUser}}
+<p>{{currentUser.local.email}}</p>
+{{/if}}
+
+
+<p>
 <a href="/questions">All Questions</a>
+</p>
+<p>
+<a href="/users/signup">Sign up!</a>
+</p>
