@@ -5,11 +5,15 @@ const Question = require('../models/Questions')
 // const User = require('../models/Users')
 
 router.get('/', (req, res) => {
-  Question.find({})
+  Question.find({}).sort({date: 'descending'})
         .then(questions => {
           res.render('questions/index', {questions})
         })
 })
+
+// module.exports.getQuestions = (id) => {
+//   return Questions.find({}).sort({ date: -1 })
+// }
 
 router.post('/', (req, res) => {
   Question.create({

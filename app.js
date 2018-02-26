@@ -35,7 +35,7 @@ app.use(function(req, res, next) {
   })
 
   app.get('/', (req, res) => {
-    Question.find({})
+    Question.find({}).sort({date: 'descending'})
           .then(questions => {
             res.render('questions/index', {questions})
           })

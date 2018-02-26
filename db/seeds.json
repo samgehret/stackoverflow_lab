@@ -1,6 +1,6 @@
 [
     {
-        "title": "Test Qusetion Title 1",
+        "title": "Test Question Title 1",
         "description": "Test Question Description 1",
         "owner": "Sam",
         "answers": [
@@ -24,7 +24,7 @@
         "date": "Feb-22-2018"
     },
     {
-        "title": "Test Qusetion Title 2",
+        "title": "Test Question Title 2",
         "description": "Test Question Description 2",
         "owner": "Sam",
         "answers":[
@@ -48,7 +48,7 @@
         "date": "Feb-21-2018"
     },
     {
-        "title": "Test Qusetion Title 3",
+        "title": "Test Question Title 3",
         "description": "Test Question Description 3",
         "owner": "Sam",
         "answers": [
