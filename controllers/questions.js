@@ -8,13 +8,10 @@ router.get('/', (req, res) => {
   Question.find({})
         .then(questions => {
           res.render('questions/index', {questions})
-          console.log(questions)
         })
 })
 
 router.post('/', (req, res) => {
-  console.log("The user object is " + req.user)
-  console.log("the poster is" + req.user.local.email)
   Question.create({
     title: req.body.title,
     owner: req.user.local.email,
@@ -41,7 +38,6 @@ router.get('/edit/:id', (req, res) => {
 router.put('/:id', (req, res) => {
   Question.findOne({ _id: req.params.id })
     .then(question => {
-      console.log(question)
       question.answers.push({
         answerText: req.body.answer,
         responder: req.user.local.email,
