@@ -1,13 +1,13 @@
-<h1>{{this.title}}</h1>
+<h1>{{questions.title}}</h1>
 
-<p>Date Posted: {{this.date}}</p>
+<p>Date Posted: {{questions.date}}</p>
 
 <h2>Question:</h2>
-<p>{{this.description}}</p>
+<p>{{questions.description}}</p>
 
 <h2>Answers Below</h2>
 <ul>
-    {{#each this.answers}}
+    {{#each questions.answers}}
     <li>
      {{this.answerText}}
         <ul>
@@ -24,12 +24,14 @@
 
 
 
-<form action = "/questions/{{this.id}}?_method=put" method = "POST">
+<form action = "/questions/{{questions.id}}?_method=put" method = "POST">
 <p>
     <label for="answer">Answer</label>
     <input type="text" name = "answer">
 </p>
 <input type = "submit" value = "Update">
+
+
 </form>
 <form action="/questions/{{id}}?_method=delete" method="POST">
     <input type="submit" value="Delete">

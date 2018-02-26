@@ -66,7 +66,11 @@ router.delete('/:id', (req, res) => {
 router.get('/:id', (req, res) => {
   Question.findOne({_id: req.params.id})
     .then(questions => {
-      res.render('questions/show', questions)
+      var sortedAnswers = questions.answers
+      sortedAnswers.sort(function (a, b) {
+        return b.dateAnswer - a.dateAnswer
+      })
+      res.render('questions/show', {questions, sortedAnswers})
     })
 })
 
