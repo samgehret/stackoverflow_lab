@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
   Question.find({})
         .then(questions => {
           res.render('questions/index', {questions})
+          console.log(questions)
         })
 })
 
@@ -18,7 +19,7 @@ router.post('/', (req, res) => {
     title: req.body.title,
     owner: req.user.local.email,
     description: req.body.description,
-    answer: [],
+    answers: [],
     date: Date.now()
   })
     .then(question => {
@@ -38,19 +39,29 @@ router.get('/edit/:id', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-  Question.update({_id: req.params.id}, {$push: {answer: req.body.answer}})
-  .then(questions => {
-    res.redirect('/questions/' + req.params.id)
-  })
+  Question.findOne({ _id: req.params.id })
+    .then(question => {
+      console.log(question)
+      question.answers.push({
+        answerText: req.body.answer,
+        responder: req.user.local.email,
+        dateAnswer: Date.now()
+      })
+      question.save()
+      res.redirect('/questions/' + req.params.id)
+    })
+  // Question.update({_id: req.params.id}, {$push: {"answerText": req.body.answer}})
+  // .then(questions => {
+  //   res.redirect('/questions/' + req.params.id)
+  // })
 })
 
-router.delete('/:id', (req,res) => {
+router.delete('/:id', (req, res) => {
   Question.findOneAndRemove({_id: req.params.id})
     .then(() => {
       res.redirect('/questions')
     })
 })
-
 
 router.get('/:id', (req, res) => {
   Question.findOne({_id: req.params.id})

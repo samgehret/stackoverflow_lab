@@ -3,10 +3,23 @@
         "title": "Test Qusetion Title 1",
         "description": "Test Question Description 1",
         "owner": "Sam",
-        "answer": [
-            "test answer 1",
-            "test answer 2",
-            "test answer 3"
+        "answers": [
+           {
+            "answerText": "Test Answer 1",
+            "responder": "Sam G",
+            "dateAnswer": "Feb-26-2018"
+            },
+           {
+            "answerText": "Test Answer 2",
+            "responder": "Sam G-2",
+            "dateAnswer": "Feb-27-2018"
+
+           },
+           {
+            "answerText": "Test Answer 3",
+            "responder": "Sam G-3",
+            "dateAnswer": "Feb-28-2018"
+           }
         ],
         "date": "Feb-22-2018"
     },
@@ -14,22 +27,48 @@
         "title": "Test Qusetion Title 2",
         "description": "Test Question Description 2",
         "owner": "Sam",
-        "answer": [
-            "test answer 1",
-            "test answer 2",
-            "test answer 3"
-        ],
+        "answers":[
+                {
+                 "answerText": "Test Answer 1",
+                 "responder": "Sam G",
+                 "dateAnswer": "Feb-26-2018"
+                 },
+                {
+                 "answerText": "Test Answer 2",
+                 "responder": "Sam G-2",
+                 "dateAnswer": "Feb-27-2018"
+     
+                },
+                {
+                 "answerText": "Test Answer 3",
+                 "responder": "Sam G-3",
+                 "dateAnswer": "Feb-28-2018"
+                }
+             ],
         "date": "Feb-21-2018"
     },
     {
         "title": "Test Qusetion Title 3",
         "description": "Test Question Description 3",
         "owner": "Sam",
-        "answer": [
-            "test answer 1",
-            "test answer 2",
-            "test answer 3"
-        ],
+        "answers": [
+            {
+             "answerText": "Test Answer 1",
+             "responder": "Sam G",
+             "dateAnswer": "Feb-26-2018"
+             },
+            {
+             "answerText": "Test Answer 2",
+             "responder": "Sam G-2",
+             "dateAnswer": "Feb-27-2018"
+ 
+            },
+            {
+             "answerText": "Test Answer 3",
+             "responder": "Sam G-3",
+             "dateAnswer": "Feb-28-2018"
+            }
+         ],
         "date": "Feb-20-2018"
     }
 ]

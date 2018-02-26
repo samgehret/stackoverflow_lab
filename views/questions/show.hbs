@@ -7,9 +7,17 @@
 
 <h2>Answers Below</h2>
 <ul>
-    {{#each this.answer}}
+    {{#each this.answers}}
     <li>
-     {{this}}
+     {{this.answerText}}
+        <ul>
+            <li>
+            {{this.responder}}
+            </li>
+            <li>
+            {{this.dateAnswer}}
+            </li>
+        </ul>
     </li>
     {{/each}}
 </ul>
