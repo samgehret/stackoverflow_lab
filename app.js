@@ -46,7 +46,9 @@ app.use(function(req, res, next) {
   app.use('/users', usersController)
 
 
-app.listen(4000, () => {
-    console.log("app listening on port 4000")
+  app.set('port', process.env.PORT || 3001)
+
+  app.listen(app.get('port'), () => {
+    console.log(`✅ PORT: ${app.get('port')} 🌟`)
   })
   

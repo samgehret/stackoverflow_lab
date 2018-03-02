@@ -71,7 +71,6 @@ router.get('/:id', (req, res) => {
         return b.dateAnswer - a.dateAnswer
       })
       res.render('questions/show', {questions, sortedAnswers})
-    })
 })
 
 module.exports = router
